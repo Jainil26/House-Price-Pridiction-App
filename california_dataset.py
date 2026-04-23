@@ -16,21 +16,21 @@ data = fetch_california_housing()
 df = pd.DataFrame(data.data , columns=data.feature_names)
 df['Price'] = data.target
 
-# print(df.shape)
-# print(df.head())
+ print(df.shape)
+ print(df.head())
 
-# print(df.info())
-# print(df.describe())
-# print(df.isnull().sum())
+ print(df.info())
+ print(df.describe())
+ print(df.isnull().sum())
 
-# plt.figure(figsize=(10,6))
-# sns.heatmap(df.corr(),annot=True,cmap='coolwarm',fmt='.2f')
-# plt.title('Feature Correlation')
-# plt.show()
+ plt.figure(figsize=(10,6))
+ sns.heatmap(df.corr(),annot=True,cmap='coolwarm',fmt='.2f')
+ plt.title('Feature Correlation')
+ plt.show()
 
-# sns.histplot(df['Price'], bins=50)
-# plt.title('House Price Distribution')
-# plt.show()
+ sns.histplot(df['Price'], bins=50)
+ plt.title('House Price Distribution')
+ plt.show()
 
 x = df.drop('Price',axis=1)
 y = df['Price']
@@ -59,9 +59,9 @@ print("MAE: ", round(mean_absolute_error(y_test, y_pred_rf), 3))
 print("RMSE:", round(np.sqrt(mean_squared_error(y_test, y_pred_rf)), 3))
 print("R²:  ", round(r2_score(y_test, y_pred_rf), 3))
 
-# importances = pd.Series(rf.feature_importances_, index=data.feature_names)
-# importances.sort_values().plot(kind='barh', title='Feature Importance')
-# plt.show()
+ importances = pd.Series(rf.feature_importances_, index=data.feature_names)
+ importances.sort_values().plot(kind='barh', title='Feature Importance')
+ plt.show()
 
 joblib.dump(rf, 'model.pkl')
 joblib.dump(scaler, 'scaler.pkl')
