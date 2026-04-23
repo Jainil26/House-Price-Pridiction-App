@@ -154,8 +154,8 @@ pip install -r requirements.txt
 ## 👤 Author
 
 **Jainil Chavda**
-- GitHub: [@your-username](https://github.com/Jainil26)
-- LinkedIn: [your-linkedin](https://www.linkedin.com/in/jainil-chavda/)
+- GitHub: [@Jainil26](https://github.com/Jainil26)
+- LinkedIn: [@Jainil Chavda](https://www.linkedin.com/in/jainil-chavda/)
 
 ---
 
